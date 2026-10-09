@@ -3,6 +3,20 @@ import java.time.Period;
 
 public final class Teacher {
 
+    private static final int MAX_NAME_LENGTH = 100;
+    private static final int MAX_TEXT_LENGTH = 150;
+    private static final int MAX_EMAIL_LENGTH = 254;
+
+    private static final String NAME_REGEX =
+            "\\p{L}+(?:[ '\\-]\\p{L}+)*";
+
+    private static final String PHONE_REGEX =
+            "\\+[1-9][0-9]{7,14}";
+
+    private static final String EMAIL_REGEX =
+            "[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+"
+                    + "(?:\\.[A-Za-z0-9-]+)*\\.[A-Za-z]{2,63}";
+
     private final int teacherId;
     private final String lastName;
     private final String firstName;
@@ -26,74 +40,55 @@ public final class Teacher {
             String phone,
             String email
     ) {
-        if (!isValidTeacherId(teacherId)) {
-            throw new IllegalArgumentException(
-                    "ID преподавателя должен быть больше нуля"
-            );
-        }
+        requireValid(
+                isValidTeacherId(teacherId),
+                "ID должен быть больше нуля"
+        );
 
-        if (!isValidLastName(lastName)) {
-            throw new IllegalArgumentException(
-                    "Фамилия обязательна: до 100 символов, "
-                            + "буквы, пробелы, дефисы и апострофы"
-            );
-        }
+        requireValid(
+                isValidLastName(lastName),
+                "Некорректная фамилия"
+        );
 
-        if (!isValidFirstName(firstName)) {
-            throw new IllegalArgumentException(
-                    "Имя обязательно: до 100 символов, "
-                            + "буквы, пробелы, дефисы и апострофы"
-            );
-        }
+        requireValid(
+                isValidFirstName(firstName),
+                "Некорректное имя"
+        );
 
-        if (!isValidPatronymic(patronymic)) {
-            throw new IllegalArgumentException(
-                    "Отчество: до 100 символов, "
-                            + "буквы, пробелы, дефисы и апострофы; "
-                            + "при отсутствии передайте пустую строку"
-            );
-        }
+        requireValid(
+                isValidPatronymic(patronymic),
+                "Некорректное отчество"
+        );
 
-        if (!isValidBirthDate(birthDate)) {
-            throw new IllegalArgumentException(
-                    "Дата рождения обязательна "
-                            + "и должна быть раньше сегодняшней даты"
-            );
-        }
+        requireValid(
+                isValidBirthDate(birthDate),
+                "Некорректная дата рождения"
+        );
 
-        if (!isValidAcademicDegree(academicDegree)) {
-            throw new IllegalArgumentException(
-                    "Учёная степень: до 150 символов; "
-                            + "при отсутствии передайте пустую строку"
-            );
-        }
+        requireValid(
+                isValidAcademicDegree(academicDegree),
+                "Некорректная учёная степень"
+        );
 
-        if (!isValidAdministrativePosition(administrativePosition)) {
-            throw new IllegalArgumentException(
-                    "Административная должность: до 150 символов; "
-                            + "при отсутствии передайте пустую строку"
-            );
-        }
+        requireValid(
+                isValidAdministrativePosition(administrativePosition),
+                "Некорректная административная должность"
+        );
 
-        if (!isValidExperienceYears(experienceYears, birthDate)) {
-            throw new IllegalArgumentException(
-                    "Стаж должен быть неотрицательным "
-                            + "и не превышать возраст преподавателя"
-            );
-        }
+        requireValid(
+                isValidExperienceYears(experienceYears, birthDate),
+                "Стаж должен быть неотрицательным и не превышать возраст"
+        );
 
-        if (!isValidPhone(phone)) {
-            throw new IllegalArgumentException(
-                    "Телефон должен содержать + и от 8 до 15 цифр"
-            );
-        }
+        requireValid(
+                isValidPhone(phone),
+                "Некорректный телефон"
+        );
 
-        if (!isValidEmail(email)) {
-            throw new IllegalArgumentException(
-                    "Email должен иметь формат имя@домен.зона "
-                            + "и содержать не более 254 символов"
-            );
-        }
+        requireValid(
+                isValidEmail(email),
+                "Некорректный email"
+        );
 
         this.teacherId = teacherId;
         this.lastName = lastName.strip();
@@ -107,45 +102,20 @@ public final class Teacher {
         this.email = email.strip();
     }
 
-    // Статические методы валидации
     public static boolean isValidTeacherId(int teacherId) {
         return teacherId > 0;
     }
 
     public static boolean isValidLastName(String lastName) {
-        if (lastName == null) {
-            return false;
-        }
-
-        String value = lastName.strip();
-
-        return !value.isEmpty()
-                && value.length() <= 100
-                && value.matches("\\p{L}+(?:[ '\\-]\\p{L}+)*");
+        return isValidPersonName(lastName, false);
     }
 
     public static boolean isValidFirstName(String firstName) {
-        if (firstName == null) {
-            return false;
-        }
-
-        String value = firstName.strip();
-
-        return !value.isEmpty()
-                && value.length() <= 100
-                && value.matches("\\p{L}+(?:[ '\\-]\\p{L}+)*");
+        return isValidPersonName(firstName, false);
     }
 
     public static boolean isValidPatronymic(String patronymic) {
-        if (patronymic == null) {
-            return false;
-        }
-
-        String value = patronymic.strip();
-
-        return value.isEmpty()
-                || (value.length() <= 100
-                    && value.matches("\\p{L}+(?:[ '\\-]\\p{L}+)*"));
+        return isValidPersonName(patronymic, true);
     }
 
     public static boolean isValidBirthDate(LocalDate birthDate) {
@@ -154,21 +124,13 @@ public final class Teacher {
     }
 
     public static boolean isValidAcademicDegree(String academicDegree) {
-        if (academicDegree == null) {
-            return false;
-        }
-
-        return academicDegree.strip().length() <= 150;
+        return isValidOptionalText(academicDegree);
     }
 
     public static boolean isValidAdministrativePosition(
             String administrativePosition
     ) {
-        if (administrativePosition == null) {
-            return false;
-        }
-
-        return administrativePosition.strip().length() <= 150;
+        return isValidOptionalText(administrativePosition);
     }
 
     public static boolean isValidExperienceYears(
@@ -189,11 +151,8 @@ public final class Teacher {
     }
 
     public static boolean isValidPhone(String phone) {
-        if (phone == null) {
-            return false;
-        }
-
-        return phone.strip().matches("\\+[0-9]{8,15}");
+        return phone != null
+                && phone.strip().matches(PHONE_REGEX);
     }
 
     public static boolean isValidEmail(String email) {
@@ -203,11 +162,46 @@ public final class Teacher {
 
         String value = email.strip();
 
-        return value.length() <= 254
-                && value.matches("[^\\s@]+@[^\\s@]+\\.[^\\s@]+");
+        return value.length() <= MAX_EMAIL_LENGTH
+                && value.matches(EMAIL_REGEX);
     }
 
-    // Геттеры: доступ к данным только для чтения
+    private static boolean isValidPersonName(
+            String name,
+            boolean allowEmpty
+    ) {
+        if (name == null) {
+            return false;
+        }
+
+        String value = name.strip();
+
+        if (value.isEmpty()) {
+            return allowEmpty;
+        }
+
+        return value.length() <= MAX_NAME_LENGTH
+                && value.matches(NAME_REGEX);
+    }
+
+    private static boolean isValidOptionalText(String text) {
+        if (text == null) {
+            return false;
+        }
+
+        return text.strip().length() <= MAX_TEXT_LENGTH
+                && text.codePoints()
+                        .noneMatch(Character::isISOControl);
+    }
+
+    private static void requireValid(
+            boolean valid,
+            String message
+    ) {
+        if (!valid) {
+            throw new IllegalArgumentException(message);
+        }
+    }
 
     public int getTeacherId() {
         return teacherId;
