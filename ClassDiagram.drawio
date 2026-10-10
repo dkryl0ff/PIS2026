@@ -1,0 +1,287 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram id="teacher-classes" name="Class diagram">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2150" pageHeight="2050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="teacher" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="1522" width="980" x="60" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-title" parent="teacher" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;align=center;fontStyle=1;fontSize=23;" value="Teacher" vertex="1">
+          <mxGeometry height="52" width="980" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes" parent="teacher" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="436" width="980" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-0" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- MAX_NAME_LENGTH: int = 100 {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-1" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- MAX_TEXT_LENGTH: int = 150 {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-2" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- MAX_EMAIL_LENGTH: int = 254 {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-3" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- NAME_REGEX: String {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-4" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- PHONE_REGEX: String {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-5" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- EMAIL_REGEX: String {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="192" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-6" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- teacherId: int {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-7" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- lastName: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="244" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-8" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- firstName: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-9" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- patronymic: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-10" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- birthDate: LocalDate {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-11" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- academicDegree: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="348" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-12" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- administrativePosition: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-13" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- experienceYears: int {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-14" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- phone: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="426" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-attributes-15" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- email: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="452" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations" parent="teacher" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="1034" width="980" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-0" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ Teacher(teacherId: int, lastName: String, firstName: String," vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-1" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="    patronymic: String, birthDate: LocalDate, academicDegree: String," vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="524" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-2" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="    administrativePosition: String, experienceYears: int," vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-3" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="    phone: String, email: String)" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="576" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-4" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ Teacher(line: String)" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="602" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-5" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- Teacher(fields: String[])" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="628" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-6" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ Teacher(json: JsonObject)" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="654" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-7" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidTeacherId(teacherId: int): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-8" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidLastName(lastName: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="706" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-9" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidFirstName(firstName: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-10" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidPatronymic(patronymic: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="758" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-11" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidBirthDate(birthDate: LocalDate): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="784" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-12" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidAcademicDegree(academicDegree: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-13" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidAdministrativePosition(administrativePosition: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="836" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-14" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidExperienceYears(experienceYears: int, birthDate: LocalDate): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-15" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidPhone(phone: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="888" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-16" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;+ isValidEmail(email: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="914" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-17" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- isValidPersonName(name: String, allowEmpty: boolean): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-18" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- isValidOptionalText(text: String): boolean&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="966" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-19" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- requireValid(valid: boolean, message: String): void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="992" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-20" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- parseLine(line: String): String[]&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1018" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-21" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- parseInteger(value: String, fieldName: String): int&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1044" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-22" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- parseDate(value: String): LocalDate&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-23" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- readJsonPrimitive(json: JsonObject, fieldName: String): JsonPrimitive&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1096" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-24" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- readJsonString(json: JsonObject, fieldName: String): String&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1122" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-25" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- readJsonInteger(json: JsonObject, fieldName: String): int&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1148" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-26" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getTeacherId(): int" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1174" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-27" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getLastName(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-28" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getFirstName(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1226" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-29" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getPatronymic(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1252" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-30" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getBirthDate(): LocalDate" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1278" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-31" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getAcademicDegree(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1304" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-32" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getAdministrativePosition(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-33" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getExperienceYears(): int" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1356" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-34" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getPhone(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1382" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-35" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getEmail(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1408" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-36" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ toString(): String" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1434" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-37" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ equals(object: Object): boolean" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-operations-38" parent="teacher" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ hashCode(): int" vertex="1">
+          <mxGeometry height="26" width="952" x="14" y="1486" as="geometry" />
+        </mxCell>
+        <mxCell id="short" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="378" width="710" x="1370" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="short-title" parent="short" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;align=center;fontStyle=1;fontSize=23;" value="ShortTeacher&amp;nbsp;" vertex="1">
+          <mxGeometry height="52" width="710" as="geometry" />
+        </mxCell>
+        <mxCell id="short-attributes" parent="short" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="124" width="710" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="short-attributes-0" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- teacherId: int {readOnly}" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="short-attributes-1" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- lastName: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="short-attributes-2" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- initials: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="short-attributes-3" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="- email: String {readOnly}" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations" parent="short" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="202" width="710" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations-0" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ ShortTeacher(teacherId: int, lastName: String," vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations-1" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="    initials: String, email: String)" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations-2" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getTeacherId(): int" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="238" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations-3" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getLastName(): String" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations-4" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getInitials(): String" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations-5" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ getEmail(): String" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="short-operations-6" parent="short" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ toString(): String" vertex="1">
+          <mxGeometry height="26" width="682" x="14" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="186" width="790" x="590" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-title" parent="mapper" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;align=center;fontStyle=1;fontSize=23;" value="Mapper" vertex="1">
+          <mxGeometry height="52" width="790" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-attributes" parent="mapper" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="36" width="790" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-operations" parent="mapper" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673A6;fillColor=#F3EFFF;fontColor=#202020;fontFamily=Arial;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="98" width="790" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-operations-0" parent="mapper" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ Mapper()" vertex="1">
+          <mxGeometry height="26" width="762" x="14" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-operations-1" parent="mapper" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="+ toShortTeacher(teacher: Teacher): ShortTeacher" vertex="1">
+          <mxGeometry height="26" width="762" x="14" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-operations-2" parent="mapper" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#202020;" value="&lt;u&gt;- toInitial(name: String): String&lt;/u&gt;" vertex="1">
+          <mxGeometry height="26" width="762" x="14" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-teacher" edge="1" parent="1" source="mapper" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;dashPattern=6 4;strokeColor=#444444;strokeWidth=2;endArrow=open;endFill=0;startArrow=none;exitX=0.25;exitY=1;entryX=0.74;entryY=0;" target="teacher" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="787.5" y="350" />
+              <mxPoint x="785.2" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mapper-teacher-label" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=#FFFFFF;fontFamily=Arial;fontSize=18;" value="uses" vertex="1">
+          <mxGeometry height="30" width="190" x="620" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper-short" edge="1" parent="1" source="mapper" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;dashPattern=6 4;strokeColor=#444444;strokeWidth=2;endArrow=open;endFill=0;startArrow=none;exitX=1;exitY=0.65;entryX=0.35;entryY=0;" target="short" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="260.9" />
+              <mxPoint x="1470" y="930" />
+              <mxPoint x="1618.5" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mapper-short-label" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=#FFFFFF;fontFamily=Arial;fontSize=18;" value="«create»" vertex="1">
+          <mxGeometry height="30" width="190" x="1380" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="short-teacher" edge="1" parent="1" source="short" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;dashPattern=6 4;strokeColor=#444444;strokeWidth=2;endArrow=open;endFill=0;startArrow=none;exitX=0;exitY=0.65;entryX=1;entryY=0.7;" target="teacher" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="1245.7" />
+              <mxPoint x="1190" y="1445.3999999999999" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="short-teacher-label" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=#FFFFFF;fontFamily=Arial;fontSize=18;" value="uses validators" vertex="1">
+          <mxGeometry height="30" width="190" x="1110" y="1240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
