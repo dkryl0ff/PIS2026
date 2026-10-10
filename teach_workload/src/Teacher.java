@@ -1,5 +1,10 @@
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeParseException;
 
 public final class Teacher {
 
@@ -102,6 +107,40 @@ public final class Teacher {
         this.email = email.strip();
     }
 
+    public Teacher(String line) {
+        this(parseLine(line));
+    }
+
+    private Teacher(String[] fields) {
+        this(
+                parseInteger(fields[0], "teacher_id"),
+                fields[1],
+                fields[2],
+                fields[3],
+                parseDate(fields[4]),
+                fields[5],
+                fields[6],
+                parseInteger(fields[7], "experience_years"),
+                fields[8],
+                fields[9]
+        );
+    }
+
+    public Teacher(JsonObject json) {
+        this(
+                readJsonInteger(json, "teacher_id"),
+                readJsonString(json, "last_name"),
+                readJsonString(json, "first_name"),
+                readJsonString(json, "patronymic"),
+                parseDate(readJsonString(json, "birth_date")),
+                readJsonString(json, "academic_degree"),
+                readJsonString(json, "administrative_position"),
+                readJsonInteger(json, "experience_years"),
+                readJsonString(json, "phone"),
+                readJsonString(json, "email")
+        );
+    }
+
     public static boolean isValidTeacherId(int teacherId) {
         return teacherId > 0;
     }
@@ -200,6 +239,108 @@ public final class Teacher {
     ) {
         if (!valid) {
             throw new IllegalArgumentException(message);
+        }
+    }
+
+    private static String[] parseLine(String line) {
+        if (line == null || line.isBlank()) {
+            throw new IllegalArgumentException("Пустая строка");
+        }
+
+        String[] fields = line.split(";", -1);
+
+        if (fields.length != 10) {
+            throw new IllegalArgumentException(
+                    "Ожидалось 10 полей, получено: " + fields.length
+            );
+        }
+
+        return fields;
+    }
+
+    private static int parseInteger(String value, String fieldName) {
+        try {
+            return Integer.parseInt(value.strip());
+        } catch (NumberFormatException exception) {
+            throw new IllegalArgumentException(
+                    "Поле " + fieldName + " должно быть целым числом",
+                    exception
+            );
+        }
+    }
+
+    private static LocalDate parseDate(String value) {
+        try {
+            return LocalDate.parse(value.strip());
+        } catch (DateTimeParseException exception) {
+            throw new IllegalArgumentException(
+                    "Дата рождения должна быть корректной датой "
+                            + "в формате ГГГГ-ММ-ДД",
+                    exception
+            );
+        }
+    }
+
+    private static JsonPrimitive readJsonPrimitive(
+            JsonObject json,
+            String fieldName
+    ) {
+        if (json == null) {
+            throw new IllegalArgumentException("JSON не может быть null");
+        }
+
+        JsonElement value = json.get(fieldName);
+
+        if (value == null || value.isJsonNull()) {
+            throw new IllegalArgumentException(
+                    "В JSON отсутствует значение поля " + fieldName
+            );
+        }
+
+        if (!value.isJsonPrimitive()) {
+            throw new IllegalArgumentException(
+                    "Поле " + fieldName + " должно содержать одно значение"
+            );
+        }
+
+        return value.getAsJsonPrimitive();
+    }
+
+    private static String readJsonString(
+            JsonObject json,
+            String fieldName
+    ) {
+        JsonPrimitive value = readJsonPrimitive(json, fieldName);
+
+        if (!value.isString()) {
+            throw new IllegalArgumentException(
+                    "Поле " + fieldName + " должно быть строкой"
+            );
+        }
+
+        return value.getAsString();
+    }
+
+    private static int readJsonInteger(
+            JsonObject json,
+            String fieldName
+    ) {
+        JsonPrimitive value = readJsonPrimitive(json, fieldName);
+
+        if (!value.isNumber()) {
+            throw new IllegalArgumentException(
+                    "Поле " + fieldName + " должно быть числом"
+            );
+        }
+
+        try {
+            return value.getAsBigDecimal().intValueExact();
+        } catch (NumberFormatException | ArithmeticException exception) {
+            throw new IllegalArgumentException(
+                    "Поле " + fieldName
+                            + " должно быть целым числом в диапазоне int",
+                    exception
+            );
         }
     }
 
