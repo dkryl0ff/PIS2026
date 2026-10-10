@@ -12,15 +12,12 @@ public final class Teacher {
     private static final int MAX_TEXT_LENGTH = 150;
     private static final int MAX_EMAIL_LENGTH = 254;
 
-    private static final String NAME_REGEX =
-            "\\p{L}+(?:[ '\\-]\\p{L}+)*";
+    private static final String NAME_REGEX = "\\p{L}+(?:[ '\\-]\\p{L}+)*";
 
-    private static final String PHONE_REGEX =
-            "\\+[1-9][0-9]{7,14}";
+    private static final String PHONE_REGEX = "\\+[1-9][0-9]{7,14}";
 
-    private static final String EMAIL_REGEX =
-            "[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+"
-                    + "(?:\\.[A-Za-z0-9-]+)*\\.[A-Za-z]{2,63}";
+    private static final String EMAIL_REGEX = "[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+"
+            + "(?:\\.[A-Za-z0-9-]+)*\\.[A-Za-z]{2,63}";
 
     private final int teacherId;
     private final String lastName;
@@ -43,57 +40,46 @@ public final class Teacher {
             String administrativePosition,
             int experienceYears,
             String phone,
-            String email
-    ) {
+            String email) {
         requireValid(
                 isValidTeacherId(teacherId),
-                "ID должен быть больше нуля"
-        );
+                "ID должен быть больше нуля");
 
         requireValid(
                 isValidLastName(lastName),
-                "Некорректная фамилия"
-        );
+                "Некорректная фамилия");
 
         requireValid(
                 isValidFirstName(firstName),
-                "Некорректное имя"
-        );
+                "Некорректное имя");
 
         requireValid(
                 isValidPatronymic(patronymic),
-                "Некорректное отчество"
-        );
+                "Некорректное отчество");
 
         requireValid(
                 isValidBirthDate(birthDate),
-                "Некорректная дата рождения"
-        );
+                "Некорректная дата рождения");
 
         requireValid(
                 isValidAcademicDegree(academicDegree),
-                "Некорректная учёная степень"
-        );
+                "Некорректная учёная степень");
 
         requireValid(
                 isValidAdministrativePosition(administrativePosition),
-                "Некорректная административная должность"
-        );
+                "Некорректная административная должность");
 
         requireValid(
                 isValidExperienceYears(experienceYears, birthDate),
-                "Стаж должен быть неотрицательным и не превышать возраст"
-        );
+                "Стаж должен быть неотрицательным и не превышать возраст");
 
         requireValid(
                 isValidPhone(phone),
-                "Некорректный телефон"
-        );
+                "Некорректный телефон");
 
         requireValid(
                 isValidEmail(email),
-                "Некорректный email"
-        );
+                "Некорректный email");
 
         this.teacherId = teacherId;
         this.lastName = lastName.strip();
@@ -122,8 +108,7 @@ public final class Teacher {
                 fields[6],
                 parseInteger(fields[7], "experience_years"),
                 fields[8],
-                fields[9]
-        );
+                fields[9]);
     }
 
     public Teacher(JsonObject json) {
@@ -137,8 +122,7 @@ public final class Teacher {
                 readJsonString(json, "administrative_position"),
                 readJsonInteger(json, "experience_years"),
                 readJsonString(json, "phone"),
-                readJsonString(json, "email")
-        );
+                readJsonString(json, "email"));
     }
 
     public static boolean isValidTeacherId(int teacherId) {
@@ -167,23 +151,20 @@ public final class Teacher {
     }
 
     public static boolean isValidAdministrativePosition(
-            String administrativePosition
-    ) {
+            String administrativePosition) {
         return isValidOptionalText(administrativePosition);
     }
 
     public static boolean isValidExperienceYears(
             int experienceYears,
-            LocalDate birthDate
-    ) {
+            LocalDate birthDate) {
         if (!isValidBirthDate(birthDate)) {
             return false;
         }
 
         int age = Period.between(
                 birthDate,
-                LocalDate.now()
-        ).getYears();
+                LocalDate.now()).getYears();
 
         return experienceYears >= 0
                 && experienceYears <= age;
@@ -207,8 +188,7 @@ public final class Teacher {
 
     private static boolean isValidPersonName(
             String name,
-            boolean allowEmpty
-    ) {
+            boolean allowEmpty) {
         if (name == null) {
             return false;
         }
@@ -235,8 +215,7 @@ public final class Teacher {
 
     private static void requireValid(
             boolean valid,
-            String message
-    ) {
+            String message) {
         if (!valid) {
             throw new IllegalArgumentException(message);
         }
@@ -251,8 +230,7 @@ public final class Teacher {
 
         if (fields.length != 10) {
             throw new IllegalArgumentException(
-                    "Ожидалось 10 полей, получено: " + fields.length
-            );
+                    "Ожидалось 10 полей, получено: " + fields.length);
         }
 
         return fields;
@@ -264,8 +242,7 @@ public final class Teacher {
         } catch (NumberFormatException exception) {
             throw new IllegalArgumentException(
                     "Поле " + fieldName + " должно быть целым числом",
-                    exception
-            );
+                    exception);
         }
     }
 
@@ -276,15 +253,13 @@ public final class Teacher {
             throw new IllegalArgumentException(
                     "Дата рождения должна быть корректной датой "
                             + "в формате ГГГГ-ММ-ДД",
-                    exception
-            );
+                    exception);
         }
     }
 
     private static JsonPrimitive readJsonPrimitive(
             JsonObject json,
-            String fieldName
-    ) {
+            String fieldName) {
         if (json == null) {
             throw new IllegalArgumentException("JSON не может быть null");
         }
@@ -293,14 +268,12 @@ public final class Teacher {
 
         if (value == null || value.isJsonNull()) {
             throw new IllegalArgumentException(
-                    "В JSON отсутствует значение поля " + fieldName
-            );
+                    "В JSON отсутствует значение поля " + fieldName);
         }
 
         if (!value.isJsonPrimitive()) {
             throw new IllegalArgumentException(
-                    "Поле " + fieldName + " должно содержать одно значение"
-            );
+                    "Поле " + fieldName + " должно содержать одно значение");
         }
 
         return value.getAsJsonPrimitive();
@@ -308,14 +281,12 @@ public final class Teacher {
 
     private static String readJsonString(
             JsonObject json,
-            String fieldName
-    ) {
+            String fieldName) {
         JsonPrimitive value = readJsonPrimitive(json, fieldName);
 
         if (!value.isString()) {
             throw new IllegalArgumentException(
-                    "Поле " + fieldName + " должно быть строкой"
-            );
+                    "Поле " + fieldName + " должно быть строкой");
         }
 
         return value.getAsString();
@@ -323,14 +294,12 @@ public final class Teacher {
 
     private static int readJsonInteger(
             JsonObject json,
-            String fieldName
-    ) {
+            String fieldName) {
         JsonPrimitive value = readJsonPrimitive(json, fieldName);
 
         if (!value.isNumber()) {
             throw new IllegalArgumentException(
-                    "Поле " + fieldName + " должно быть числом"
-            );
+                    "Поле " + fieldName + " должно быть числом");
         }
 
         try {
@@ -339,8 +308,7 @@ public final class Teacher {
             throw new IllegalArgumentException(
                     "Поле " + fieldName
                             + " должно быть целым числом в диапазоне int",
-                    exception
-            );
+                    exception);
         }
     }
 
@@ -382,5 +350,56 @@ public final class Teacher {
 
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "teacherId=" + teacherId +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", birthDate=" + birthDate +
+                ", academicDegree='" + academicDegree + '\'' +
+                ", administrativePosition='" + administrativePosition + '\'' +
+                ", experienceYears=" + experienceYears +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+    public String toShortString() {
+        String initials = firstName.substring(
+                0,
+                firstName.offsetByCodePoints(0, 1)) + ".";
+
+        if (!patronymic.isEmpty()) {
+            initials += patronymic.substring(
+                    0,
+                    patronymic.offsetByCodePoints(0, 1)) + ".";
+        }
+
+        return teacherId + ": " + lastName + " " + initials
+                + " (" + email + ")";
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+
+        if (!(object instanceof Teacher)) {
+            return false;
+        }
+
+        Teacher other = (Teacher) object;
+
+        return teacherId == other.teacherId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(teacherId);
     }
 }
