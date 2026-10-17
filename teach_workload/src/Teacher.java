@@ -5,6 +5,7 @@ import com.google.gson.JsonPrimitive;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeParseException;
+import java.util.Objects;
 
 public final class Teacher {
 
@@ -395,11 +396,12 @@ public final class Teacher {
 
         Teacher other = (Teacher) object;
 
-        return teacherId == other.teacherId;
+        return teacherId == other.teacherId
+        && phone.equals(other.phone);
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(teacherId);
+        return Objects.hash(teacherId, phone);
     }
 }
