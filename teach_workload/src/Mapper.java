@@ -1,29 +1,21 @@
-public final class Mapper {
+public class Mapper {
 
     public ShortTeacher toShortTeacher(Teacher teacher) {
         if (teacher == null) {
-            throw new IllegalArgumentException(
-                    "Преподаватель не может быть null"
-            );
+            return null;
         }
 
-        String initials = toInitial(teacher.getFirstName());
-
-        if (!teacher.getPatronymic().isEmpty()) {
-            initials += toInitial(teacher.getPatronymic());
-        }
+        String shortName = createShortName(teacher);
 
         return new ShortTeacher(
-                teacher.getTeacherId(),
-                teacher.getLastName(),
-                initials,
-                teacher.getEmail()
+                shortName,
+                teacher.getPhone()
         );
     }
 
-    private static String toInitial(String name) {
-        int endIndex = name.offsetByCodePoints(0, 1);
-
-        return name.substring(0, endIndex) + ".";
+    protected static String createShortName(Teacher teacher) {
+        return teacher.getLastName() + " "
+                + teacher.getFirstName().charAt(0) + "."
+                + teacher.getPatronymic().charAt(0) + ".";
     }
 }

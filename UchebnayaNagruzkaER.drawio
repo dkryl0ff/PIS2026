@@ -6,7 +6,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="teacher" value="" style="group;" vertex="1" parent="1">
-          <mxGeometry x="60" y="40.0" width="520" height="424.0" as="geometry" />
+          <mxGeometry x="60" y="40.0" width="520" height="392" as="geometry" />
         </mxCell>
         <mxCell id="teacher-title" value="teacher" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#EDE8FC;align=center;fontSize=20;fontStyle=1;" vertex="1" parent="teacher">
           <mxGeometry x="0" y="0" width="520" height="42" as="geometry" />
@@ -29,95 +29,86 @@
         <mxCell id="teacher-1-2" value="PK" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;fontStyle=1;" vertex="1" parent="teacher">
           <mxGeometry x="460" y="72" width="60" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="teacher-personal-0" value="int" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="104" width="100" height="32" as="geometry" />
-        </mxCell>
-        <mxCell id="teacher-personal-1" value="teacher_id" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="104" width="360" height="32" as="geometry" />
-        </mxCell>
-        <mxCell id="teacher-personal-2" value="UQ" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="104" width="60" height="32" as="geometry" />
-        </mxCell>
         <mxCell id="teacher-2-0" value="string" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="136.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="104.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-2-1" value="last_name" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="136.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="104.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-2-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="136.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="104.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-3-0" value="string" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="168.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="136.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-3-1" value="first_name" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="168.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="136.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-3-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="168.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="136.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-4-0" value="string" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="200.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="168.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-4-1" value="patronymic" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="200.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="168.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-4-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="200.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="168.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-5-0" value="date" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="232.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="200.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-5-1" value="birth_date" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="232.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="200.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-5-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="232.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="200.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-6-0" value="string" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="264.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="232.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-6-1" value="academic_degree" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="264.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="232.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-6-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="264.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="232.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-7-0" value="string" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="296.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="264.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-7-1" value="administrative_position" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="296.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="264.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-7-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="296.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="264.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-8-0" value="int" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="328.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="296.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-8-1" value="experience_years" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="328.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="296.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-8-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="328.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="296.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-9-0" value="string" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="360.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="328.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-9-1" value="phone" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="360.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="328.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-9-2" value="UQ" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#F7F4FD;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="360.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="328.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-10-0" value="string" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;" vertex="1" parent="teacher">
-          <mxGeometry x="0" y="392.0" width="100" height="32" as="geometry" />
+          <mxGeometry x="0" y="360.0" width="100" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-10-1" value="email" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=left;spacingLeft=12;" vertex="1" parent="teacher">
-          <mxGeometry x="100" y="392.0" width="360" height="32" as="geometry" />
+          <mxGeometry x="100" y="360.0" width="360" height="32" as="geometry" />
         </mxCell>
         <mxCell id="teacher-10-2" value="" style="rounded=0;whiteSpace=wrap;html=0;strokeColor=#9673A6;fontColor=#222222;fontFamily=Arial;fontSize=17;fillColor=#FFFFFF;align=center;fontStyle=1;" vertex="1" parent="teacher">
-          <mxGeometry x="460" y="392.0" width="60" height="32" as="geometry" />
+          <mxGeometry x="460" y="360.0" width="60" height="32" as="geometry" />
         </mxCell>
         <mxCell id="subject" value="" style="group;" vertex="1" parent="1">
           <mxGeometry x="1160" y="40.0" width="450" height="168" as="geometry" />
