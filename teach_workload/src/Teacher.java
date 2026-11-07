@@ -295,7 +295,22 @@ public class Teacher {
                 + ", телефон: " + phone;
     }
 
-    public boolean isSameTeacher(Teacher teacher) {
-        return teacher != null && phone.equals(teacher.phone);
+    @Override
+public boolean equals(Object obj) {
+    if (this == obj) {
+        return true;
     }
+
+    if (obj == null || getClass() != obj.getClass()) {
+        return false;
+    }
+
+    Teacher other = (Teacher) obj;
+    return phone.equals(other.phone);
+}
+
+@Override
+public int hashCode() {
+    return phone.hashCode();
+}
 }

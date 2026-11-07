@@ -30,7 +30,7 @@ public class App {
         System.out.println();
         System.out.println(
                 "Запись из строки совпадает: "
-                        + teacher.isSameTeacher(teacherFromLine)
+                        + teacher.equals(teacherFromLine)
         );
 
         JsonObject json = new JsonObject();
@@ -41,7 +41,7 @@ public class App {
         json.addProperty("academic_degree", "");
         json.addProperty("administrative_position", "");
         json.addProperty("experience_years", 8);
-        json.addProperty("phone", "+79265554433");
+        json.addProperty("phone", "+79161234567");
         json.addProperty("email", "orlov@example.com");
 
         Teacher anotherTeacher = new Teacher(json);
@@ -52,7 +52,7 @@ public class App {
 
         System.out.println(
                 "Совпадает с основным преподавателем: "
-                        + teacher.isSameTeacher(anotherTeacher)
+                        + teacher.equals(anotherTeacher)
         );
 
         System.out.println();
